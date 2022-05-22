@@ -1,10 +1,15 @@
 import './App.css';
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const App = () => {
   
   const [counter, setCounter] = useState(0)
 
+  useEffect(() => {
+    console.log("The counter has been updated to "+counter)
+    
+  }, [counter]);
+  
   return (
     <div className="App">
       <button onClick={() => {
